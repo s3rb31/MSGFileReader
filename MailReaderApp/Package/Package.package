@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="8835674a-0c27-4e21-996a-eb487700530c" solutionId="8835674a-0c27-4e21-996a-eb487700530c" resetWebServer="false" sharePointProductVersion="15.0" name="MailReader" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="8e3b03ab-3f50-4817-be68-6e2b45df91cd" />
+  </features>
+</package>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <CustomAction Id="1e0fca9b-3417-4594-b273-4707dd4b6af4.ContextMenuButton"
+                RegistrationType="FileType"
+                RegistrationId="msg"
+                Location="EditControlBlock"
+                Sequence="0"
+                Title="MailReader"
+                HostWebDialog="true"
+                HostWebDialogWidth="840"
+                HostWebDialogHeight="750">
+    <UrlAction Url="~appWebUrl/Content/MailReader/render.html?SPHostUrl={SiteUrl}&amp;SPListId={ListId}&amp;SPListItemId={ItemId}" />
+  </CustomAction>
+</Elements>

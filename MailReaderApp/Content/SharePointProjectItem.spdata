@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.Module" DefaultFile="Elements.xml" SupportedTrustLevels="All" SupportedDeploymentScopes="Web, Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="Content\" Type="ElementManifest" />
+    <ProjectItemFile Source="AppIcon.png" Target="Content\" Type="ElementFile" />
+    <ProjectItemFile Source="Default.aspx" Target="Content\" Type="ElementFile" />
+    <ProjectItemFile Source="app.js" Target="Content\" Type="ElementFile" />
+    <ProjectItemFile Source="MailReader\lib\mailreader.min.js" Target="Content\MailReader\lib\" Type="ElementFile" />
+    <ProjectItemFile Source="MailReader\setup.js" Target="Content\MailReader\" Type="ElementFile" />
+    <ProjectItemFile Source="MailReader\render.js" Target="Content\MailReader\" Type="ElementFile" />
+    <ProjectItemFile Source="MailReader\render.html" Target="Content\MailReader\" Type="ElementFile" />
+    <ProjectItemFile Source="MailReader\lib\cptable.full.js" Target="Content\MailReader\lib\" Type="ElementFile" />
+    <ProjectItemFile Source="MailReader\lib\symboltable.min.js" Target="Content\MailReader\lib\" Type="ElementFile" />
+    <ProjectItemFile Source="MailReader\lib\lzfucomp.min.js" Target="Content\MailReader\lib\" Type="ElementFile" />
+    <ProjectItemFile Source="MailReader\render.css" Target="Content\MailReader\" Type="ElementFile" />
+  </Files>
+</ProjectItem>

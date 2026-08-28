@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "mail-reader-command-set": {
+      "components": [
+        {
+          "entrypoint": "./lib/extensions/mailReader/MailReaderCommandSet.js",
+          "manifest": "./src/extensions/mailReader/MailReaderCommandSet.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "MailReaderCommandSetStrings": "lib/extensions/mailReader/loc/{locale}.js"
+  }
+}

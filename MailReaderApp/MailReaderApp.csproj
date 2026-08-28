@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6FCCC46F-8BEB-485A-B59E-152067159C37}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MailReaderApp</RootNamespace>
+    <AssemblyName>MailReaderApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <MinimumOfficeToolsVersion>11.1</MinimumOfficeToolsVersion>
+    <IncludeAssemblyInPackage>False</IncludeAssemblyInPackage>
+    <ProjectMode>SharePointApp</ProjectMode>
+    <AppFeaturePartId>{34cefb50-8f8c-48e3-ac48-f9e34126ee67}</AppFeaturePartId>
+    <WspPartId>{c6c5b24a-8845-4b93-acca-d5fa0a26a74f}</WspPartId>
+    <WorkflowPartId>{bab2fc26-d442-4acf-a689-93e75ebc1d98}</WorkflowPartId>
+    <CspkgPartId>{6401066b-53dd-4e71-8a03-a43cc42a5bf6}</CspkgPartId>
+    <SqlPackagePartId>{35113a2f-2d0d-4dbc-ba16-9e2d50fcaecf}</SqlPackagePartId>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Content\app.js" />
+    <Content Include="Content\Default.aspx" />
+    <Content Include="Content\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Content\AppIcon.png">
+      <OpcRelationship>manifest-icon</OpcRelationship>
+    </Content>
+    <Content Include="Content\MailReader\lib\cptable.full.js" />
+    <Content Include="Content\MailReader\lib\mailreader.min.js" />
+    <Content Include="Content\MailReader\lib\lzfucomp.min.js" />
+    <Content Include="Content\MailReader\render.css" />
+    <Content Include="Content\MailReader\setup.js" />
+    <Content Include="Content\MailReader\lib\symboltable.min.js" />
+    <Content Include="Content\MailReader\render.html" />
+    <Content Include="Content\MailReader\render.js" />
+    <Content Include="Elements.xml" />
+    <Content Include="ContextMenuAction\Elements.xml">
+      <OpcRelationship>feature-elementmanifest</OpcRelationship>
+    </Content>
+    <None Include="Content\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{977a55f4-70a0-44e9-a7e4-da502d361568}</SharePointProjectItemId>
+    </None>
+    <None Include="ContextMenuAction\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{ce64f252-68d0-4bfe-b293-d51454e6bdc7}</SharePointProjectItemId>
+    </None>
+    <None Include="SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{7c12844b-7584-4c2b-ab5c-2d5695b464e6}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Package\Package.package">
+      <PackageId>{8835674a-0c27-4e21-996a-eb487700530c}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="Features\Feature1\Feature1.feature">
+      <FeatureId>{8e3b03ab-3f50-4817-be68-6e2b45df91cd}</FeatureId>
+    </None>
+    <None Include="Features\Feature1\Feature1.Template.xml">
+      <DependentUpon>Feature1.feature</DependentUpon>
+    </None>
+    <AppManifestFile Include="AppManifest.xml">
+      <SubType>Designer</SubType>
+    </AppManifestFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+  <PropertyGroup>
+    <PreBuildEvent>echo Copying from $(SolutionDir)MailReader\dist\ 
+echo to $(ProjectDir)content\Mailreader\ ...
+echo(
+
+copy /B /Y $(SolutionDir)\MailReader\dist\* $(ProjectDir)\content\MailReader\lib\
+copy /B /Y $(SolutionDir)\MailReader\dist\dependencies\* $(ProjectDir)\content\MailReader\lib\
+
+echo Done!
+echo(</PreBuildEvent>
+  </PropertyGroup>
+</Project>

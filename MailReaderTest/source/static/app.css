@@ -1,0 +1,58 @@
+﻿html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+h1 {
+    width: 50%;
+    float: left;
+}
+
+#test-btn {
+    float: right;
+    height: 43px;
+    margin: 21.440px 0;
+    margin-right: 5%;
+}
+
+#next-btn {
+    float: right;
+    height: 43px;
+    margin: 21.440px 0;
+    margin-right: 5%;
+}
+
+#prev-btn {
+    float: right;
+    height: 43px;
+    margin: 21.440px 0;
+    margin-right: 5%;
+}
+
+#left {
+    float: left;
+    height: 100%;
+    width: 49%;
+    overflow-y: scroll;
+}
+
+#right {
+    float: right;
+    height: 100%;
+    width: 50%;
+}
+
+#body
+{
+    width: 95%;
+    height: 98%;
+    border: 1px solid grey;
+}

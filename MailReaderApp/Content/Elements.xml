@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="Content">
+    <File Path="Content\AppIcon.png" Url="Content/AppIcon.png" ReplaceContent="TRUE" />
+    <File Path="Content\Default.aspx" Url="Content/Default.aspx" ReplaceContent="TRUE" />
+    <File Path="Content\app.js" Url="Content/app.js" ReplaceContent="TRUE" />
+    <File Path="Content\MailReader\lib\mailreader.min.js" Url="Content/MailReader/lib/mailreader.min.js" ReplaceContent="TRUE" />
+    <File Path="Content\MailReader\setup.js" Url="Content/MailReader/setup.js" ReplaceContent="TRUE" />
+    <File Path="Content\MailReader\render.js" Url="Content/MailReader/render.js" ReplaceContent="TRUE" />
+    <File Path="Content\MailReader\render.html" Url="Content/MailReader/Render.html" ReplaceContent="TRUE" />
+    <File Path="Content\MailReader\lib\cptable.full.js" Url="Content/MailReader/lib/cptable.full.js" ReplaceContent="TRUE" />
+    <File Path="Content\MailReader\lib\symboltable.min.js" Url="Content/MailReader/lib/symboltable.min.js" ReplaceContent="TRUE" />
+    <File Path="Content\MailReader\lib\lzfucomp.min.js" Url="Content/MailReader/lib/lzfucomp.min.js" ReplaceContent="TRUE" />
+    <File Path="Content\MailReader\render.css" Url="Content/MailReader/render.css" ReplaceContent="TRUE" />
+  </Module>
+</Elements>

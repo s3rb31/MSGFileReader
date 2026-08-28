@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <base target="_parent">
+	<title>GFA SysCom MailReader</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="render.css" />
+    <link rel="stylesheet" href="/_layouts/15/1033/styles/error.css" />
+    <link rel="stylesheet" href="/_layouts/15/1033/styles/Themable/corev15.css" />
+    <script type="text/javascript" src="lib/cptable.full.js"></script>
+    <script type="text/javascript" src="lib/symboltable.min.js"></script>
+    <script type="text/javascript" src="lib/lzfucomp.min.js"></script>
+    <script type="text/javascript" src="lib/mailreader.min.js"></script>
+    <script type="text/javascript" src="render.js"></script>
+    <script>
+        function fadeToggle(elem)
+        {
+            var elem = document.querySelector(elem);
+            var op = Number.parseFloat(elem.style.opacity);
+            var factor = (op >= 1) ? -1 : 1;
+
+            elem.style.display = "block";
+            var timer = setInterval(function () {
+                if ((factor == -1 && op <= 0.1) ||
+                    (factor == 1 && op >= 0.9)) {
+                    clearInterval(timer);
+                    elem.style.display =
+                        (factor == -1 ? "none" : "block");
+                }
+                op += 0.1 * factor;
+                elem.style.opacity = op;
+            }, 50);
+        };
+    </script>
+</head>
+<body>
+    <div id="loading" class="visible">
+        <div style="display: table; width: 100%;">
+            <div style="width: 60%; margin: 118px auto 16px auto; padding: 10px;">
+                <div class="ms-dlgLoadingTextDiv ms-alignCenter">
+                    <a class="ms-core-pageTitle ms-accentText">Loading</a>
+                </div>
+                <div class="ms-textXLarge ms-alignCenter">Please wait ...</div>
+            </div>
+        </div>
+    </div>
+    <div id="error">
+        <div style="display: table; width: 100%;">
+            <div style="width: 60%; margin: auto;">
+                <div id="ms-error-header" class="ms-pr">
+                    <h1 class="ms-core-pageTitle">Sorry, something went wrong</h1>
+                </div>
+                <div id="ms-error">
+                    <div id="ms-error-content">
+                        <div id="ms-error-error-content">
+                            <div id="DeltaPlaceHolderMain">
+                                <div>An unexpected error has occurred. Try to open this file with Outlook.</div>
+                                <div class="ms-error-detailsFold">
+                                    <div class="ms-foldHyperLink-panel" onclick="fadeToggle('#tech-details'); return false;">
+                                        <a id="details-link" class="ms-commandLink ms-floatLeft" href="#">Technical Details</a>
+                                        <div class="ms-clear"></div>
+                                    </div>
+                                    <div id="tech-details" class="ms-hide" style="opacity: 0;">
+                                        <div>
+                                            <p><span id="error-info" class="ms-metadata"></span></p>
+                                            <p><span id="error-time" class="ms-metadata"></span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ms-error-techMsg"><hr></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="content">
+        <div style="height: 100%; display: flex; flex-direction: column;">
+            <div id="header">
+                <table>
+                    <tr><td id="time"></td></tr>
+                    <tr class="space"></tr>
+                    <tr><td id="sender"></td></tr>
+                    <tr><td id="subject"></td></tr>
+                    <tr class="space"></tr>
+                </table>
+                <table>
+                    <tr class="recipinfo">
+                        <td>To:&nbsp;</td><td></td>
+                    </tr>
+                    <tr class="recipinfo">
+                        <td>CC:&nbsp;</td><td></td>
+                    </tr>
+                    <tr class="recipinfo">
+                        <td>BCC:&nbsp;</td><td></td>
+                    </tr>
+                    <tr class="space"></tr>
+                </table>
+                <table id="attachlist">
+                    <tr><td><ul></ul></td></tr>
+                    <tr class="space"></tr>
+                </table>
+            </div>
+            <iframe id="frame"></iframe>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>MSGFile Reader</title>
+    <link rel="stylesheet" href="/source/static/app.css" />
+
+    <script src="/test/dependencies/jdataview.min.js"></script>
+    <script src="/test/dependencies/jbinary.min.js"></script>
+
+    <script src="/test/dependencies/cptable.full.js"></script>
+    <script src="/test/dependencies/symboltable.min.js"></script>
+
+    <!-- custom code below -->
+
+    <!--<script src="/test/lzfucomp.min.js"></script>
+    <script src="/test/mailreader.min.js"></script>-->
+
+    <script src="/dbg/js/Util.js"></script>
+    <script src="/dbg/js/cfb/Header.js"></script>
+    <script src="/dbg/js/cfb/DirEntry.js"></script>
+    <script src="/dbg/js/cfb/Storage.js"></script>
+    <script src="/dbg/js/cfb/File.js"></script>
+    <script src="/dbg/js/rtf/LZFUCompression.js"></script>
+    <script src="/dbg/js/rtf/HTMLCapsulation.js"></script>
+    <script src="/dbg/js/msg/Property.js"></script>
+    <script src="/dbg/js/msg/PropertyNameMap.js"></script>
+    <script src="/dbg/js/msg/PropertyStream.js"></script>
+    <script src="/dbg/js/msg/ObjProps.js"></script>
+    <script src="/dbg/js/msg/File.js"></script>
+    <script src="/dbg/js/msg/Mail.js"></script>
+
+    <script src="/source/test.js"></script>
+</head>
+<body>
+    <header>
+        <h1>MSGFile Reader</h1>
+        <button id="next-btn">Next mail</button>
+        <button id="prev-btn">Prev mail</button>
+        <button id="test-btn">Test!</button>
+        <div style="clear: both;"></div>
+    </header>
+    <div style="height: 90%;">
+        <div id="left">
+            <pre id="console"></pre>
+        </div>
+        <div id="right">
+            <iframe id="body"></iframe>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+	"title": "MailReader (New Experience)",
+	"name": "mail-reader-command-set",
+    "id": "75d8ca8b-24fe-42c8-bac9-536ad424f3d3",
+    "version": "1.0.0.0",
+	"skipFeatureDeployment": true,
+    "includeClientSideAssets": true,
+    "isDomainIsolated": false,
+    "features": [
+      {
+        "title": "Application Extension - Deployment of custom action.",
+        "description": "Deploys a custom action with ClientSideComponentId association",
+        "id": "cb3ed3b4-f936-41bd-bf4d-f24d7b1ef400",
+        "version": "1.0.0.0",
+        "assets": {
+          "elementManifests": [
+            "elements.xml",
+            "clientsideinstance.xml"
+          ]
+        }
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/mail-reader-cmd.sppkg"
+  }
+}
