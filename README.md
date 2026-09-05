@@ -1,4 +1,4 @@
-# MSGMailReader
+# MSGFileReader
 
 This is a Client-side Outlook MSG-File rendering library and a Sharepoint CustomAction that integrates this library into old SharePoint 2016
 
